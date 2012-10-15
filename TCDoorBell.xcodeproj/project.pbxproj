@@ -12,7 +12,9 @@
 		734611C9162A0649007AB843 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734611C8162A0649007AB843 /* CoreGraphics.framework */; };
 		734611CF162A0649007AB843 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 734611CD162A0649007AB843 /* InfoPlist.strings */; };
 		734611D1162A0649007AB843 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 734611D0162A0649007AB843 /* main.m */; };
-		734611D5162A0649007AB843 /* TCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 734611D4162A0649007AB843 /* TCAppDelegate.m */; };
+		734611E3162A0920007AB843 /* TCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 734611E2162A0920007AB843 /* TCAppDelegate.m */; };
+		734611E7162A0A1C007AB843 /* TCPeopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 734611E6162A0A1C007AB843 /* TCPeopleViewController.m */; };
+		73876FB5162BA03D0043292F /* TCPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 73876FB4162BA03D0043292F /* TCPerson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +26,12 @@
 		734611CE162A0649007AB843 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		734611D0162A0649007AB843 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		734611D2162A0649007AB843 /* TCDoorBell-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TCDoorBell-Prefix.pch"; sourceTree = "<group>"; };
-		734611D3162A0649007AB843 /* TCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCAppDelegate.h; sourceTree = "<group>"; };
-		734611D4162A0649007AB843 /* TCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCAppDelegate.m; sourceTree = "<group>"; };
+		734611E1162A0920007AB843 /* TCAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCAppDelegate.h; sourceTree = "<group>"; };
+		734611E2162A0920007AB843 /* TCAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCAppDelegate.m; sourceTree = "<group>"; };
+		734611E5162A0A1C007AB843 /* TCPeopleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPeopleViewController.h; sourceTree = "<group>"; };
+		734611E6162A0A1C007AB843 /* TCPeopleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPeopleViewController.m; sourceTree = "<group>"; };
+		73876FB3162BA03D0043292F /* TCPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPerson.h; sourceTree = "<group>"; };
+		73876FB4162BA03D0043292F /* TCPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPerson.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +78,10 @@
 		734611CA162A0649007AB843 /* TCDoorBell */ = {
 			isa = PBXGroup;
 			children = (
-				734611D3162A0649007AB843 /* TCAppDelegate.h */,
-				734611D4162A0649007AB843 /* TCAppDelegate.m */,
+				734611E0162A0920007AB843 /* App Delegate */,
+				734611E4162A09A4007AB843 /* Controllers */,
+				73876FB2162BA02F0043292F /* Model */,
+				73876FB0162B9F340043292F /* Views */,
 				734611CB162A0649007AB843 /* Supporting Files */,
 			);
 			path = TCDoorBell;
@@ -88,6 +96,40 @@
 				734611D2162A0649007AB843 /* TCDoorBell-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		734611E0162A0920007AB843 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				734611E1162A0920007AB843 /* TCAppDelegate.h */,
+				734611E2162A0920007AB843 /* TCAppDelegate.m */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		734611E4162A09A4007AB843 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				734611E5162A0A1C007AB843 /* TCPeopleViewController.h */,
+				734611E6162A0A1C007AB843 /* TCPeopleViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		73876FB0162B9F340043292F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		73876FB2162BA02F0043292F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				73876FB3162BA03D0043292F /* TCPerson.h */,
+				73876FB4162BA03D0043292F /* TCPerson.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,7 +196,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				734611D1162A0649007AB843 /* main.m in Sources */,
-				734611D5162A0649007AB843 /* TCAppDelegate.m in Sources */,
+				734611E3162A0920007AB843 /* TCAppDelegate.m in Sources */,
+				734611E7162A0A1C007AB843 /* TCPeopleViewController.m in Sources */,
+				73876FB5162BA03D0043292F /* TCPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +306,7 @@
 				734611DA162A0649007AB843 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
