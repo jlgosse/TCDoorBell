@@ -1,3 +1,6 @@
 [submodule "TCDoorBell/Libraries/SVProgressHUD"]
 	path = TCDoorBell/Libraries/SVProgressHUD
 	url = git://github.com/samvermette/SVProgressHUD.git
+[submodule "TCDoorBell/Libraries/AFNetworking"]
+	path = TCDoorBell/Libraries/AFNetworking
+	url = git://github.com/AFNetworking/AFNetworking.git
