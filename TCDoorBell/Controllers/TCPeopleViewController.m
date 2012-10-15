@@ -7,15 +7,13 @@
 //
 
 #import "TCPeopleViewController.h"
+#import "TCPeopleCollectionViewCell.h"
 #import "TCPerson.h"
+#import "TCService.h"
+
+#import "UIImageView+AFNetworking.h"
 
 #pragma mark - Implementation
-
-#define kTCCellIdentifier @"TCPeopleViewCell"
-
-#define kTCNumericCellWidth		240.0f
-#define kTCNumericCellHeight	240.0f
-#define kTCNumericSectionInset	12.0f
 
 @implementation TCPeopleViewController {
 	UICollectionView *_collectionView;
@@ -37,7 +35,7 @@
 	_collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
 	_collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
 	[_collectionView setShowsVerticalScrollIndicator:YES];
-	[_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:kTCCellIdentifier];
+	[_collectionView registerClass:[TCPeopleCollectionViewCell class] forCellWithReuseIdentifier:kTCCellIdentifier];
 	
 	// assign the controller as the delegate and datasource of the collection view
 	_collectionView.delegate = self;
@@ -46,20 +44,19 @@
 	[self.view addSubview:_collectionView];
 }
 
+#pragma mark - View Lifecycle
+
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
 	
-	// data structure for storing the list of employees
-	_people = [[NSMutableArray alloc] init];
-	
-	for (int i = 0; i < 100; i++) {
-		TCPerson *person = [[TCPerson alloc] init];
-		person.name = [NSString stringWithFormat:@"%d", i];
-		[_people addObject:person];
-	}
-	
-	[_collectionView reloadData];
+	[[TCService sharedInstance] listAllPeopleWithCallback:^(id content, NSError *error) {
+		// data structure for storing the list of employees
+		_people = content;
+		
+		// reload the collection view with the data
+		[_collectionView reloadData];
+	}];
 }
 
 #pragma mark - UICollectionView Delegate
@@ -73,17 +70,18 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+	// get the person 
 	TCPerson *person = [_people objectAtIndex:indexPath.row];
-	UICollectionViewCell *collectionViewCell = [_collectionView dequeueReusableCellWithReuseIdentifier:kTCCellIdentifier forIndexPath:indexPath];
+	TCPeopleCollectionViewCell *peopleViewCell = [_collectionView dequeueReusableCellWithReuseIdentifier:kTCCellIdentifier forIndexPath:indexPath];
 	
 	UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectZero];
 	backgroundView.backgroundColor = [UIColor whiteColor];
-	collectionViewCell.backgroundView = backgroundView;
+	peopleViewCell.backgroundView = backgroundView;
 
-	UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
-	label.text = person.name;
-
-	return collectionViewCell;
+	peopleViewCell.labelName.text = person.name;
+	[peopleViewCell.imageView setImageWithURL:[NSURL URLWithString:person.photoURL]];
+	
+	return peopleViewCell;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section

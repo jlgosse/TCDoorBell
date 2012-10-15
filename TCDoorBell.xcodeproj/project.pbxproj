@@ -39,6 +39,8 @@
 		73877071162CB17D0043292F /* CHANGES in Resources */ = {isa = PBXBuildFile; fileRef = 73877034162CB17D0043292F /* CHANGES */; };
 		73877085162CB17D0043292F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 7387705C162CB17D0043292F /* LICENSE */; };
 		73877086162CB17D0043292F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7387705D162CB17D0043292F /* README.md */; };
+		73877093162CB3600043292F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73877091162CB3540043292F /* SystemConfiguration.framework */; };
+		73877096162CB3810043292F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73877094162CB36E0043292F /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +59,7 @@
 		73876FB3162BA03D0043292F /* TCPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPerson.h; sourceTree = "<group>"; };
 		73876FB4162BA03D0043292F /* TCPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPerson.m; sourceTree = "<group>"; };
 		73876FB6162CA53E0043292F /* TCPeopleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPeopleCollectionViewCell.h; sourceTree = "<group>"; };
-		73876FB7162CA53E0043292F /* TCPeopleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPeopleCollectionViewCell.m; sourceTree = "<group>"; };
+		73876FB7162CA53E0043292F /* TCPeopleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TCPeopleCollectionViewCell.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		73876FBA162CA7210043292F /* TCService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCService.h; sourceTree = "<group>"; };
 		73876FBB162CA7210043292F /* TCService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCService.m; sourceTree = "<group>"; };
 		73876FC6162CAB720043292F /* people.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = people.json; sourceTree = "<group>"; };
@@ -93,6 +95,9 @@
 		73877034162CB17D0043292F /* CHANGES */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGES; sourceTree = "<group>"; };
 		7387705C162CB17D0043292F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		7387705D162CB17D0043292F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		7387708E162CB3020043292F /* TCConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = TCConstants.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		73877091162CB3540043292F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		73877094162CB36E0043292F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +106,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				734611C5162A0649007AB843 /* UIKit.framework in Frameworks */,
+				73877096162CB3810043292F /* MobileCoreServices.framework in Frameworks */,
+				73877093162CB3600043292F /* SystemConfiguration.framework in Frameworks */,
 				734611C7162A0649007AB843 /* Foundation.framework in Frameworks */,
 				73876FD1162CAD500043292F /* QuartzCore.framework in Frameworks */,
 				734611C9162A0649007AB843 /* CoreGraphics.framework in Frameworks */,
@@ -130,6 +137,8 @@
 		734611C3162A0649007AB843 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73877094162CB36E0043292F /* MobileCoreServices.framework */,
+				73877091162CB3540043292F /* SystemConfiguration.framework */,
 				73876FCF162CAD480043292F /* QuartzCore.framework */,
 				734611C4162A0649007AB843 /* UIKit.framework */,
 				734611C6162A0649007AB843 /* Foundation.framework */,
@@ -142,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				734611E0162A0920007AB843 /* App Delegate */,
+				7387708D162CB2F20043292F /* Constants */,
 				734611E4162A09A4007AB843 /* Controllers */,
 				73876FB2162BA02F0043292F /* Model */,
 				73876FB9162CA7150043292F /* Service */,
@@ -285,6 +295,14 @@
 				73877031162CB17D0043292F /* UIImageView+AFNetworking.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		7387708D162CB2F20043292F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				7387708E162CB3020043292F /* TCConstants.h */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -1,0 +1,22 @@
+[
+	{
+		"name": "Josh Gosse",
+		"phone_number": "613-818-9560",
+		"photo_url": "https://secure.gravatar.com/avatar/df29fc515105f9ef7f784f0bee21cc69.jpg"
+	},
+	{
+		"name": "Lucas Harding",
+		"phone_number": "613-218-0050",
+		"photo_url": "https://secure.gravatar.com/avatar/dfbf155cc209d60502c6b7f6b2735d83.jpg"
+	},
+	{
+		"name": "Bob Saget",
+		"phone_number": "555-123-9100",
+		"photo_url": "http://www.bolgernow.com/blog/wp-content/uploads/2009/04/bob-saget-best.jpg"
+	},
+	{
+		"name": "Mitt Romney",
+		"phone_number": "555-321-9999",
+		"photo_url": "http://images.businessweek.com/cms/2012-07-16/0705_romney_630x420.jpg"
+	}
+]

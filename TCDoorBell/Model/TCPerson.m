@@ -8,9 +8,6 @@
 
 #import "TCPerson.h"
 
-#define kTCKeyName			@"name"
-#define kTCKeyPhoneNumber	@"phone_number"
-
 @implementation TCPerson
 
 #pragma mark - Initialization
@@ -30,6 +27,7 @@
 {
 	_name = [dictionary objectForKey:kTCKeyName];
 	_phoneNumber = [dictionary objectForKey:kTCKeyPhoneNumber];
+	_photoURL = [dictionary objectForKey:kTCKeyPhotoURL];
 }
 
 @end

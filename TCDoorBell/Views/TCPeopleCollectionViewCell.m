@@ -7,6 +7,7 @@
 //
 
 #import "TCPeopleCollectionViewCell.h"
+#import "UIImageView+AFNetworking.h"
 
 @implementation TCPeopleCollectionViewCell
 
@@ -19,13 +20,15 @@
 		self.backgroundColor = [UIColor whiteColor];
 		
 		_imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
-		_imageView.contentMode = UIViewContentModeScaleAspectFill;
+		_imageView.contentMode = UIViewContentModeScaleAspectFit;
+		_imageView.backgroundColor = [UIColor grayColor];
 		[self addSubview:_imageView];
 		
 		_labelName = [[UILabel alloc] initWithFrame:CGRectZero];
 		_labelName.backgroundColor = [UIColor clearColor];
-		_labelName.font = [UIFont systemFontOfSize:20.0f];
+		_labelName.font = [UIFont systemFontOfSize:kTCNumericPeopleCellFontSize];
 		_labelName.textColor = [UIColor darkGrayColor];
+		_labelName.textAlignment = NSTextAlignmentCenter;
 		[self addSubview:_labelName];
     }
     return self;
@@ -39,13 +42,13 @@
 	
 	CGRect bounds = self.bounds;
 	
-	CGFloat xOffset = CGRectGetMinX(bounds) + 10.0f;
-	CGFloat width = CGRectGetWidth(bounds) - 10.0f * 2.0f;
+	CGFloat xOffset = CGRectGetMinX(bounds) + kTCNumericCellPadding;
+	CGFloat width = CGRectGetWidth(bounds) - kTCNumericCellPadding * 2.0f;
 	
 	_imageView.frame = CGRectMake(xOffset,
-								  CGRectGetMinY(bounds) + 10.0f,
+								  CGRectGetMinY(bounds) + kTCNumericCellPadding,
 								  width,
-								  CGRectGetHeight(bounds) - 10.0f * 2.0f - _labelName.font.lineHeight);
+								  CGRectGetHeight(bounds) - kTCNumericCellPadding * 2.0f - _labelName.font.lineHeight);
 	
 	_labelName.frame = CGRectMake(xOffset,
 								  CGRectGetMaxY(_imageView.frame),
