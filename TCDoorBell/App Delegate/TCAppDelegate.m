@@ -18,7 +18,7 @@
 	TCPeopleViewController *peopleViewController = [[TCPeopleViewController alloc] init];
 	
 	self.window.rootViewController = peopleViewController;
-    self.window.backgroundColor = [UIColor blackColor];
+    self.window.backgroundColor = [UIColor darkGrayColor];
     [self.window makeKeyAndVisible];
 	
     return YES;

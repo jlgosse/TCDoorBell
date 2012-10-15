@@ -1,0 +1,3 @@
+[submodule "TCDoorBell/Libraries/SVProgressHUD"]
+	path = TCDoorBell/Libraries/SVProgressHUD
+	url = git://github.com/samvermette/SVProgressHUD.git

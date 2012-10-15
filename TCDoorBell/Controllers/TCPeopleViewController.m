@@ -21,17 +21,6 @@
 	UICollectionView *_collectionView;
 }
 
-#pragma mark - Initialization
-
-- (id)init
-{
-	self = [super init];
-	if (self) {
-		self.view.backgroundColor = [UIColor blackColor];
-	}
-	return self;
-}
-
 #pragma mark - Views
 
 - (void)loadView
@@ -47,6 +36,7 @@
 	// add a collection view, allow it to take up the entirety of the display
 	_collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
 	_collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+	[_collectionView setShowsVerticalScrollIndicator:YES];
 	[_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:kTCCellIdentifier];
 	
 	// assign the controller as the delegate and datasource of the collection view

@@ -15,6 +15,16 @@
 		734611E3162A0920007AB843 /* TCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 734611E2162A0920007AB843 /* TCAppDelegate.m */; };
 		734611E7162A0A1C007AB843 /* TCPeopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 734611E6162A0A1C007AB843 /* TCPeopleViewController.m */; };
 		73876FB5162BA03D0043292F /* TCPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 73876FB4162BA03D0043292F /* TCPerson.m */; };
+		73876FB8162CA53E0043292F /* TCPeopleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73876FB7162CA53E0043292F /* TCPeopleCollectionViewCell.m */; };
+		73876FBC162CA7210043292F /* TCService.m in Sources */ = {isa = PBXBuildFile; fileRef = 73876FBB162CA7210043292F /* TCService.m */; };
+		73876FC7162CAB720043292F /* people.json in Resources */ = {isa = PBXBuildFile; fileRef = 73876FC6162CAB720043292F /* people.json */; };
+		73876FD1162CAD500043292F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73876FCF162CAD480043292F /* QuartzCore.framework */; };
+		73876FEF162CAF480043292F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 73876FD3162CAF470043292F /* .gitignore */; };
+		73876FF7162CAF480043292F /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 73876FE4162CAF470043292F /* LICENSE.txt */; };
+		73876FF8162CAF480043292F /* README.textile in Resources */ = {isa = PBXBuildFile; fileRef = 73876FE5162CAF470043292F /* README.textile */; };
+		73876FF9162CAF480043292F /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 73876FE7162CAF470043292F /* SVProgressHUD.bundle */; };
+		73876FFA162CAF480043292F /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 73876FE9162CAF470043292F /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		73876FFB162CAF480043292F /* SVProgressHUD.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 73876FEA162CAF470043292F /* SVProgressHUD.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +42,19 @@
 		734611E6162A0A1C007AB843 /* TCPeopleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPeopleViewController.m; sourceTree = "<group>"; };
 		73876FB3162BA03D0043292F /* TCPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPerson.h; sourceTree = "<group>"; };
 		73876FB4162BA03D0043292F /* TCPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPerson.m; sourceTree = "<group>"; };
+		73876FB6162CA53E0043292F /* TCPeopleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPeopleCollectionViewCell.h; sourceTree = "<group>"; };
+		73876FB7162CA53E0043292F /* TCPeopleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPeopleCollectionViewCell.m; sourceTree = "<group>"; };
+		73876FBA162CA7210043292F /* TCService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCService.h; sourceTree = "<group>"; };
+		73876FBB162CA7210043292F /* TCService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCService.m; sourceTree = "<group>"; };
+		73876FC6162CAB720043292F /* people.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = people.json; sourceTree = "<group>"; };
+		73876FCF162CAD480043292F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		73876FD3162CAF470043292F /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		73876FE4162CAF470043292F /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		73876FE5162CAF470043292F /* README.textile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.textile; sourceTree = "<group>"; };
+		73876FE7162CAF470043292F /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		73876FE8162CAF470043292F /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		73876FE9162CAF470043292F /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		73876FEA162CAF470043292F /* SVProgressHUD.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SVProgressHUD.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +64,7 @@
 			files = (
 				734611C5162A0649007AB843 /* UIKit.framework in Frameworks */,
 				734611C7162A0649007AB843 /* Foundation.framework in Frameworks */,
+				73876FD1162CAD500043292F /* QuartzCore.framework in Frameworks */,
 				734611C9162A0649007AB843 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,6 +92,7 @@
 		734611C3162A0649007AB843 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73876FCF162CAD480043292F /* QuartzCore.framework */,
 				734611C4162A0649007AB843 /* UIKit.framework */,
 				734611C6162A0649007AB843 /* Foundation.framework */,
 				734611C8162A0649007AB843 /* CoreGraphics.framework */,
@@ -81,8 +106,11 @@
 				734611E0162A0920007AB843 /* App Delegate */,
 				734611E4162A09A4007AB843 /* Controllers */,
 				73876FB2162BA02F0043292F /* Model */,
+				73876FB9162CA7150043292F /* Service */,
 				73876FB0162B9F340043292F /* Views */,
 				734611CB162A0649007AB843 /* Supporting Files */,
+				73876FC5162CAB4F0043292F /* Resources */,
+				73876FC8162CAC670043292F /* Libraries */,
 			);
 			path = TCDoorBell;
 			sourceTree = "<group>";
@@ -119,6 +147,8 @@
 		73876FB0162B9F340043292F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				73876FB6162CA53E0043292F /* TCPeopleCollectionViewCell.h */,
+				73876FB7162CA53E0043292F /* TCPeopleCollectionViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -130,6 +160,53 @@
 				73876FB4162BA03D0043292F /* TCPerson.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		73876FB9162CA7150043292F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				73876FBA162CA7210043292F /* TCService.h */,
+				73876FBB162CA7210043292F /* TCService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		73876FC5162CAB4F0043292F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				73876FC6162CAB720043292F /* people.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		73876FC8162CAC670043292F /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				73876FD2162CAF470043292F /* SVProgressHUD */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		73876FD2162CAF470043292F /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				73876FD3162CAF470043292F /* .gitignore */,
+				73876FE4162CAF470043292F /* LICENSE.txt */,
+				73876FE5162CAF470043292F /* README.textile */,
+				73876FE6162CAF470043292F /* SVProgressHUD */,
+				73876FEA162CAF470043292F /* SVProgressHUD.podspec */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		73876FE6162CAF470043292F /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				73876FE7162CAF470043292F /* SVProgressHUD.bundle */,
+				73876FE8162CAF470043292F /* SVProgressHUD.h */,
+				73876FE9162CAF470043292F /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +262,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				734611CF162A0649007AB843 /* InfoPlist.strings in Resources */,
+				73876FC7162CAB720043292F /* people.json in Resources */,
+				73876FEF162CAF480043292F /* .gitignore in Resources */,
+				73876FF7162CAF480043292F /* LICENSE.txt in Resources */,
+				73876FF8162CAF480043292F /* README.textile in Resources */,
+				73876FF9162CAF480043292F /* SVProgressHUD.bundle in Resources */,
+				73876FFB162CAF480043292F /* SVProgressHUD.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +282,9 @@
 				734611E3162A0920007AB843 /* TCAppDelegate.m in Sources */,
 				734611E7162A0A1C007AB843 /* TCPeopleViewController.m in Sources */,
 				73876FB5162BA03D0043292F /* TCPerson.m in Sources */,
+				73876FB8162CA53E0043292F /* TCPeopleCollectionViewCell.m in Sources */,
+				73876FBC162CA7210043292F /* TCService.m in Sources */,
+				73876FFA162CAF480043292F /* SVProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
