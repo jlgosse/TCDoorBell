@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TCPerson.h"
 
 @interface TCPeopleCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, readonly, strong) UIImageView *imageView;
 @property (nonatomic, readonly, strong) UILabel *labelName;
+
+- (void)updateWithPerson:(TCPerson *)person;
 
 @end

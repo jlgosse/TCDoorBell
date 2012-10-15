@@ -17,7 +17,10 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-		self.backgroundColor = [UIColor whiteColor];
+		// give the cell a pretty border
+		UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectZero];
+		backgroundView.backgroundColor = [UIColor whiteColor];
+		self.backgroundView = backgroundView;
 		
 		_imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
 		_imageView.contentMode = UIViewContentModeScaleAspectFit;
@@ -32,6 +35,14 @@
 		[self addSubview:_labelName];
     }
     return self;
+}
+
+#pragma mark - Update
+
+- (void)updateWithPerson:(TCPerson *)person
+{
+	_labelName.text = person.name;
+	[_imageView setImageWithURL:[NSURL URLWithString:person.photoURL]];
 }
 
 #pragma mark - Layout

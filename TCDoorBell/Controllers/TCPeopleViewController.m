@@ -70,16 +70,10 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-	// get the person 
+	// get the person located at the current index and update the view
 	TCPerson *person = [_people objectAtIndex:indexPath.row];
 	TCPeopleCollectionViewCell *peopleViewCell = [_collectionView dequeueReusableCellWithReuseIdentifier:kTCCellIdentifier forIndexPath:indexPath];
-	
-	UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectZero];
-	backgroundView.backgroundColor = [UIColor whiteColor];
-	peopleViewCell.backgroundView = backgroundView;
-
-	peopleViewCell.labelName.text = person.name;
-	[peopleViewCell.imageView setImageWithURL:[NSURL URLWithString:person.photoURL]];
+	[peopleViewCell updateWithPerson:person];
 	
 	return peopleViewCell;
 }
