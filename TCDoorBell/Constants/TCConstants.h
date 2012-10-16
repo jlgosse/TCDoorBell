@@ -8,6 +8,10 @@
 
 #define kTCCellIdentifier @"TCPeopleCollectionViewCell"
 
+#pragma mark - Notifications
+
+#define kTCApplicationDidReceiveUnlockNotification @"kTCApplicationDidReceiveUnlockNotification"
+
 #pragma mark - Service
 
 #define kTCKeyName			@"name"
