@@ -17,6 +17,6 @@ typedef void (^TCServiceCallback) (id content, NSError *error);
 + (TCService *)sharedInstance;
 
 - (void)listAllPeopleWithCallback:(TCServiceCallback)callback;
-- (void)sendSMSToPerson:(TCPerson *)person withBodyText:(NSString *) callback:(TCServiceCallback)callback;
+- (void)sendTextMessageToPerson:(TCPerson *)person withBody:(NSString *)body callback:(TCServiceCallback)callback;
 
 @end

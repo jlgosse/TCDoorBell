@@ -41,6 +41,8 @@
 		73877086162CB17D0043292F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7387705D162CB17D0043292F /* README.md */; };
 		73877093162CB3600043292F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73877091162CB3540043292F /* SystemConfiguration.framework */; };
 		73877096162CB3810043292F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73877094162CB36E0043292F /* MobileCoreServices.framework */; };
+		738E3B18162CE220006CBC6C /* TCMessagingUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 738E3B17162CE220006CBC6C /* TCMessagingUtils.m */; };
+		738E3B1C162CF894006CBC6C /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 738E3B1B162CF894006CBC6C /* NSData+Base64.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +100,10 @@
 		7387708E162CB3020043292F /* TCConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = TCConstants.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		73877091162CB3540043292F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		73877094162CB36E0043292F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		738E3B16162CE220006CBC6C /* TCMessagingUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCMessagingUtils.h; sourceTree = "<group>"; };
+		738E3B17162CE220006CBC6C /* TCMessagingUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCMessagingUtils.m; sourceTree = "<group>"; };
+		738E3B1A162CF894006CBC6C /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		738E3B1B162CF894006CBC6C /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +161,7 @@
 				734611E4162A09A4007AB843 /* Controllers */,
 				73876FB2162BA02F0043292F /* Model */,
 				73876FB9162CA7150043292F /* Service */,
+				738E3B14162CE20F006CBC6C /* Utils */,
 				73876FB0162B9F340043292F /* Views */,
 				734611CB162A0649007AB843 /* Supporting Files */,
 				73876FC5162CAB4F0043292F /* Resources */,
@@ -230,6 +237,7 @@
 		73876FC8162CAC670043292F /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				738E3B19162CF894006CBC6C /* NSData+Base64 */,
 				7387701D162CB17D0043292F /* AFNetworking */,
 				73876FD2162CAF470043292F /* SVProgressHUD */,
 			);
@@ -303,6 +311,24 @@
 				7387708E162CB3020043292F /* TCConstants.h */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		738E3B14162CE20F006CBC6C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				738E3B16162CE220006CBC6C /* TCMessagingUtils.h */,
+				738E3B17162CE220006CBC6C /* TCMessagingUtils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		738E3B19162CF894006CBC6C /* NSData+Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				738E3B1A162CF894006CBC6C /* NSData+Base64.h */,
+				738E3B1B162CF894006CBC6C /* NSData+Base64.m */,
+			);
+			path = "NSData+Base64";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +421,8 @@
 				7387706C162CB17D0043292F /* AFURLConnectionOperation.m in Sources */,
 				7387706D162CB17D0043292F /* AFXMLRequestOperation.m in Sources */,
 				7387706E162CB17D0043292F /* UIImageView+AFNetworking.m in Sources */,
+				738E3B18162CE220006CBC6C /* TCMessagingUtils.m in Sources */,
+				738E3B1C162CF894006CBC6C /* NSData+Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

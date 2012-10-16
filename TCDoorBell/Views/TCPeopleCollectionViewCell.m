@@ -62,7 +62,7 @@
 								  CGRectGetHeight(bounds) - kTCNumericCellPadding * 2.0f - _labelName.font.lineHeight);
 	
 	_labelName.frame = CGRectMake(xOffset,
-								  CGRectGetMaxY(_imageView.frame),
+								  CGRectGetMaxY(_imageView.frame) + kTCNumericCellTextYOffset,
 								  width,
 								  _labelName.font.lineHeight);
 }
