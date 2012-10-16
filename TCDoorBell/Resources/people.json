@@ -18,5 +18,70 @@
 		"name": "Mitt Romney",
 		"phone_number": "555-321-9999",
 		"photo_url": "http://images.businessweek.com/cms/2012-07-16/0705_romney_630x420.jpg"
+	},
+	{
+		"name": "Flava Flav",
+		"phone_number": "555-818-9560",
+		"photo_url": "https://secure.gravatar.com/avatar/df29fc515105f9ef7f784f0bee21cc69.jpg"
+	},
+	{
+		"name": "Snooki",
+		"phone_number": "555-218-0050",
+		"photo_url": "https://secure.gravatar.com/avatar/dfbf155cc209d60502c6b7f6b2735d83.jpg"
+	},
+	{
+		"name": "Richard Stallman",
+		"phone_number": "555-123-9100",
+		"photo_url": "http://www.bolgernow.com/blog/wp-content/uploads/2009/04/bob-saget-best.jpg"
+	},
+	{
+		"name": "Neil Degrass Dyson",
+		"phone_number": "555-818-9560",
+		"photo_url": "https://secure.gravatar.com/avatar/df29fc515105f9ef7f784f0bee21cc69.jpg"
+	},
+	{
+		"name": "Tyler Durdon",
+		"phone_number": "555-218-0050",
+		"photo_url": "https://secure.gravatar.com/avatar/dfbf155cc209d60502c6b7f6b2735d83.jpg"
+	},
+	{
+		"name": "Eddard Stark",
+		"phone_number": "555-123-9100",
+		"photo_url": "http://www.bolgernow.com/blog/wp-content/uploads/2009/04/bob-saget-best.jpg"
+	},
+	{
+		"name": "Britney Spears",
+		"phone_number": "555-818-9560",
+		"photo_url": "https://secure.gravatar.com/avatar/df29fc515105f9ef7f784f0bee21cc69.jpg"
+	},
+	{
+		"name": "Margaret Thatcher",
+		"phone_number": "555-218-0050",
+		"photo_url": "https://secure.gravatar.com/avatar/dfbf155cc209d60502c6b7f6b2735d83.jpg"
+	},
+	{
+		"name": "Bill Clinton",
+		"phone_number": "555-123-9100",
+		"photo_url": "http://www.bolgernow.com/blog/wp-content/uploads/2009/04/bob-saget-best.jpg"
+	},
+	{
+		"name": "Peyton Manning",
+		"phone_number": "555-218-0050",
+		"photo_url": "https://secure.gravatar.com/avatar/dfbf155cc209d60502c6b7f6b2735d83.jpg"
+	},
+	{
+		"name": "Sam Jackson",
+		"phone_number": "555-123-9100",
+		"photo_url": "http://www.bolgernow.com/blog/wp-content/uploads/2009/04/bob-saget-best.jpg"
+	},
+	{
+		"name": "Captain Morgan",
+		"phone_number": "555-818-9560",
+		"photo_url": "https://secure.gravatar.com/avatar/df29fc515105f9ef7f784f0bee21cc69.jpg"
+	},
+	{
+		"name": "Bill Nye",
+		"phone_number": "555-218-0050",
+		"photo_url": "https://secure.gravatar.com/avatar/dfbf155cc209d60502c6b7f6b2735d83.jpg"
 	}
 ]

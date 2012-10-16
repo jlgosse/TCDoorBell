@@ -12,6 +12,7 @@
 #import "TCService.h"
 
 #import "UIImageView+AFNetworking.h"
+#import "SVProgressHUD.h"
 
 #pragma mark - Implementation
 
@@ -63,7 +64,16 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+	TCPerson *person = [_people objectAtIndex:indexPath.row];
 	
+	[[TCService sharedInstance] sendTextMessageToPerson:person withBody:@"This is a test" callback:^(id content, NSError *error) {
+		if (error) {
+			NSLog(@"%@", error);
+		}
+		else {
+			NSLog(@"success");
+		}
+	}];
 }
 
 #pragma mark - UICollectionView DataSource

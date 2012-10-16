@@ -7,6 +7,8 @@
 //
 
 #import "TCService.h"
+#import "TCMessagingUtils.h"
+
 #import "NSData+Base64.h"
 
 @implementation TCService
@@ -86,7 +88,7 @@
 		NSError *error = nil;
 		unsigned int statusCode = 0;
 		
-		NSString *rawPost = [NSString stringWithFormat:@"From=+%@&To=+%@&Body=%@", kTCTwilioLocalNumber, person.phoneNumber, body];
+		NSString *rawPost = [NSString stringWithFormat:@"From=+%@&To=+%@&Body=%@", kTCTwilioLocalNumber, [TCMessagingUtils formatPhoneNumber:person.phoneNumber], body];
 		
 		// send the text message
 		NSData *dataReturned = [self synchronousDataFromURL:[NSString stringWithFormat:kTCTwilioSMSURL, kTCTwilioAccountSID, kTCTwilioAuthToken, kTCTwilioAccountSID] method:@"POST" body:rawPost error:&error statusCode:&statusCode];
