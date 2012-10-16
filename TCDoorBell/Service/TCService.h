@@ -18,5 +18,6 @@ typedef void (^TCServiceCallback) (id content, NSError *error);
 
 - (void)listAllPeopleWithCallback:(TCServiceCallback)callback;
 - (void)sendTextMessageToPerson:(TCPerson *)person withBody:(NSString *)body callback:(TCServiceCallback)callback;
+- (void)unlockDoor:(NSString *)door callback:(TCServiceCallback)callback;
 
 @end

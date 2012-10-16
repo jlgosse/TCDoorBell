@@ -1,17 +1,12 @@
 [
 	{
-		"name": "Josh Gosse",
-		"phone_number": "613-818-9560",
-		"photo_url": "https://secure.gravatar.com/avatar/df29fc515105f9ef7f784f0bee21cc69.jpg"
-	},
-	{
 		"name": "Lucas Harding",
 		"phone_number": "613-218-0050",
 		"photo_url": "https://secure.gravatar.com/avatar/dfbf155cc209d60502c6b7f6b2735d83.jpg"
 	},
 	{
 		"name": "Bob Saget",
-		"phone_number": "555-123-9100",
+		"phone_number": "650-741-4507",
 		"photo_url": "http://www.bolgernow.com/blog/wp-content/uploads/2009/04/bob-saget-best.jpg"
 	},
 	{
@@ -58,6 +53,11 @@
 		"name": "Britney Spears",
 		"phone_number": "555-818-9560",
 		"photo_url": "http://www.inquisitr.com/wp-content/2012/09/britney-spears-womanizer.jpg"
+	},
+	{
+		"name": "Josh Gosse",
+		"phone_number": "650-741-4507",
+		"photo_url": "https://secure.gravatar.com/avatar/df29fc515105f9ef7f784f0bee21cc69.jpg"
 	},
 	{
 		"name": "Bill Clinton",

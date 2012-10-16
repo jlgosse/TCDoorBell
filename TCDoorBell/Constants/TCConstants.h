@@ -18,6 +18,12 @@
 #define kTCKeyPhoneNumber	@"phone_number"
 #define kTCKeyPhotoURL		@"photo_url"
 
+#pragma mark - Phidget Communication
+
+#define kTCDoorURL @"http://10.11.21.229:4567"
+#define kTCDoorEndPoint @"/open"
+#define kTCDoorSecret @"i3V5ewReAYWAmzixf1CdSPgBp0NHL2tHCwvFYQdA0tUmJAf3YBoYfMXKtuCPK4r"
+
 #pragma mark - Numeric
 
 #define kTCNumericCellPadding			10.0f

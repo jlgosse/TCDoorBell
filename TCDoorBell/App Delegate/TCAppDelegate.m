@@ -8,6 +8,7 @@
 
 #import "TCAppDelegate.h"
 #import "TCPeopleViewController.h"
+#import "TCService.h"
 
 @implementation TCAppDelegate
 
@@ -42,6 +43,15 @@
 {
 	// pipe the remote notification into notification center
 	[[NSNotificationCenter defaultCenter] postNotificationName:kTCApplicationDidReceiveUnlockNotification object:nil userInfo:userInfo];
+	
+	[[TCService sharedInstance] unlockDoor:@"reception" callback:^(id content, NSError *error) {
+		if (error) {
+			NSLog(@"%@", error);
+		}
+		else {
+			NSLog(@"Success!");
+		}
+	}];
 }
 
 @end

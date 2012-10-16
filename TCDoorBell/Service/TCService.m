@@ -103,4 +103,34 @@
 	});
 }
 
+#pragma mark - Phidget Communication
+
+- (void)unlockDoor:(NSString *)door callback:(TCServiceCallback)callback
+{
+	if (door == nil) {
+		door = @"reception";
+	}
+	
+	NSURL	*url  = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@/%@", kTCDoorURL, kTCDoorEndPoint, door]];
+	NSData	*data = [[NSString stringWithFormat:@"secret=%@", kTCDoorSecret] dataUsingEncoding:NSUTF8StringEncoding];
+	
+	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
+	[urlRequest setHTTPMethod:@"POST"];
+	[urlRequest setHTTPBody:data];
+	
+	[NSURLConnection sendAsynchronousRequest:urlRequest queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+		NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+		
+		if ([responseString rangeOfString:@"404"].location != NSNotFound) {
+			error = [NSError errorWithDomain:@"" code:404 userInfo:nil];
+		}
+		
+		[[NSOperationQueue mainQueue] addOperationWithBlock:^{
+			if (callback) {
+				callback(nil, error);
+			}
+		}];
+	}];
+}
+
 @end
