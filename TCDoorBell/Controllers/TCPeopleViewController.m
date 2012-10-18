@@ -51,6 +51,8 @@
 {
 	[super viewDidLoad];
 	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveUnlockNotification:) name:kTCApplicationDidReceiveUnlockNotification object:nil];
+	
 	[[TCService sharedInstance] listAllPeopleWithCallback:^(id content, NSError *error) {
 		// data structure for storing the list of employees
 		_people = content;
@@ -60,19 +62,33 @@
 	}];
 }
 
+- (void)dealloc
+{
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 #pragma mark - UICollectionView Delegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+	UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
 	TCPerson *person = [_people objectAtIndex:indexPath.row];
 	
-	[[TCService sharedInstance] sendTextMessageToPerson:person withBody:@"This is a test" callback:^(id content, NSError *error) {
+	cell.backgroundView.backgroundColor = [UIColor purpleColor];
+	
+	[[TCService sharedInstance] sendTextMessageToPerson:person withBody:kTCStringTextMessageBody callback:^(id content, NSError *error) {
+		UIAlertView *alertView = nil;
+		
 		if (error) {
-			NSLog(@"%@", error);
+			alertView = [[UIAlertView alloc] initWithTitle:nil message:kTCStringMessageSendFailure delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
 		}
 		else {
-			NSLog(@"success");
+			alertView = [[UIAlertView alloc] initWithTitle:nil message:kTCStringMessageSendSuccess delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
 		}
+		
+		[alertView show];
+		
+		cell.backgroundView.backgroundColor = [UIColor whiteColor];
 	}];
 }
 
@@ -96,6 +112,13 @@
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
 	return 1;
+}
+
+#pragma mark - Unlock Notification
+
+- (void)didReceiveUnlockNotification:(NSNotification *)notification
+{
+	[[TCService sharedInstance] unlockDoor:@"reception" callback:nil];
 }
 
 @end

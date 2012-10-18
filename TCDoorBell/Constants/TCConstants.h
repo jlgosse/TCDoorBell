@@ -33,6 +33,12 @@
 #define kTCNumericPeopleCellFontSize	24.0f
 #define kTCNumericCellTextYOffset		6.0f
 
+#pragma mark - Strings
+
+#define kTCStringTextMessageBody		@"Someone is here to see you. Reply with 'UNLOCK' to let them in."
+#define kTCStringMessageSendSuccess		@"Your message was sent successfully!"
+#define kTCStringMessageSendFailure		@"There was a problem sending your text message!"
+
 #pragma mark - Twilio API
 
 // twilio API

@@ -46,7 +46,9 @@
 
 	dispatch_async(dispatch_get_main_queue(), ^{
 		if (callback) {
-			callback([NSArray arrayWithArray:peopleObjectArray], error);
+			dispatch_async(dispatch_get_main_queue(), ^{
+				callback([NSArray arrayWithArray:peopleObjectArray], error);
+			});
 		}
 	});
 }
@@ -111,8 +113,8 @@
 		door = @"reception";
 	}
 	
-	NSURL	*url  = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@/%@", kTCDoorURL, kTCDoorEndPoint, door]];
-	NSData	*data = [[NSString stringWithFormat:@"secret=%@", kTCDoorSecret] dataUsingEncoding:NSUTF8StringEncoding];
+	NSURL *url  = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@/%@", kTCDoorURL, kTCDoorEndPoint, door]];
+	NSData *data = [[NSString stringWithFormat:@"secret=%@", kTCDoorSecret] dataUsingEncoding:NSUTF8StringEncoding];
 	
 	NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
 	[urlRequest setHTTPMethod:@"POST"];
@@ -127,7 +129,9 @@
 		
 		[[NSOperationQueue mainQueue] addOperationWithBlock:^{
 			if (callback) {
-				callback(nil, error);
+				dispatch_async(dispatch_get_main_queue(), ^{
+					callback(nil, error);
+				});
 			}
 		}];
 	}];
